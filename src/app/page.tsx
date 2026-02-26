@@ -84,7 +84,7 @@ export default function Home() {
         </div>
 
         <div className="hero-badge">
-          ✈️ מערכת חינוך חסידית פורצת דרך
+          ✈️ &nbsp;מערכת חינוך חסידית פורצת דרך
         </div>
 
         <h1 className="text-gradient">
@@ -141,13 +141,13 @@ export default function Home() {
             />
           </div>
           <div className="split-text-wrapper reveal reveal-delay-2">
-            <h2 className="text-gold">האתגר: חינוך 360° בעולם של שקר וכזב</h2>
+            <h2 style={{ color: 'var(--navy)', fontSize: '2.2rem' }}>האתגר: <span className="text-gold">חינוך 360°</span> בעולם של שקר וכזב</h2>
             <p className="large-p">
               איך מעניקים לילד אמת בעולם רווי מסכים והסחות דעת?
             </p>
-            <p style={{ color: 'var(--gray)' }}>
+            <p style={{ color: 'var(--gray)', lineHeight: '1.85' }}>
               חינוך חסידי אמיתי אינו מוגבל לשעות הלימודים.
-              זוהי מציאות של 24/7 המחברת בין ציפיות הרבי, אמצי התלמוד תורה,
+              זוהי מציאות של 24/7 המחברת בין ציפיות הרבי, אנשי התלמוד תורה,
               והסביבה הביתית. בטרמינל כנפיים מצאנו את הדרך לגשר על הפער
               בין בית הספר לבית באמצעות טכנולוגיה רותמת ומשמעותית.
             </p>
