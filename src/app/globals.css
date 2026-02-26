@@ -1191,7 +1191,9 @@ h1, h2, h3, h4 {
 }
 
 .pricing-features li::before {
-  content: "✓";
+  content: "";
+  display: block;
+  width: 16px;
   color: var(--primary);
   font-weight: bold;
   font-size: 1rem;
@@ -1529,4 +1531,33 @@ h1, h2, h3, h4 {
   .testimonials-grid {
     grid-template-columns: 1fr;
   }
+}
+
+/* ================================================
+   WING DIVIDERS
+   ================================================ */
+.wing-title-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.wing {
+  flex: 0 1 80px;
+  height: 12px;
+  background-image: repeating-linear-gradient(90deg, var(--primary) 0, var(--primary) 4px, transparent 4px, transparent 8px);
+  border-radius: 6px;
+  opacity: 0.8;
+}
+
+.wing.left { transform: skewX(-30deg); background: linear-gradient(-90deg, var(--primary), transparent); }
+.wing.right { transform: skewX(30deg); background: linear-gradient(90deg, var(--primary), transparent); }
+
+.wing-title-wrapper h2 {
+  font-size: 2.5rem;
+  color: var(--navy);
+  margin: 0;
+  text-align: center;
 }

@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-
+import { Plane, CreditCard, BarChart3, Gift, Crown, Building2, TowerControl, Wrench, MessageCircle, Mail, UserRound, Home as HomeIcon, Check } from 'lucide-react';
 export default function Home() {
   useEffect(() => {
     // Scroll reveal observer
@@ -84,7 +84,7 @@ export default function Home() {
         </div>
 
         <div className="hero-badge">
-          ✈️ &nbsp;מערכת חינוך חסידית פורצת דרך
+          <Plane size={18} style={{marginLeft: '0.5rem'}} /> מערכת חינוך חסידית פורצת דרך
         </div>
 
         <h1 className="text-gradient">
@@ -152,9 +152,9 @@ export default function Home() {
               בין בית הספר לבית באמצעות טכנולוגיה רותמת ומשמעותית.
             </p>
             <ul className="challenge-list">
-              <li><span className="check">✓</span> שותפות בית-ספר-בית</li>
-              <li><span className="check">✓</span> חוויה של צמיחה אישית</li>
-              <li><span className="check">✓</span> מערכת משחוק ומוטיבציה (Gamification)</li>
+              <li><span className="check"><Check size={18} /></span> שותפות בית-ספר-בית</li>
+              <li><span className="check"><Check size={18} /></span> חוויה של צמיחה אישית</li>
+              <li><span className="check"><Check size={18} /></span> מערכת משחוק ומוטיבציה (Gamification)</li>
             </ul>
           </div>
         </div>
@@ -165,8 +165,11 @@ export default function Home() {
       {/* ============================================ */}
       <section id="features" className="section">
         <div className="section-header reveal">
-          <div className="section-divider" />
-          <h2>מערכות הליבה של הטרמינל</h2>
+          <div className="wing-title-wrapper">
+            <span className="wing left"></span>
+            <h2>מערכות הליבה של הטרמינל</h2>
+            <span className="wing right"></span>
+          </div>
           <p>
             כל מה שמוסד חינוכי צריך כדי להגביר מוטיבציה, לעקוב אחר הצלחות
             ולחבר את כל המעגלים סביב התלמיד: מורים, הורים והתלמיד עצמו.
@@ -175,37 +178,37 @@ export default function Home() {
         <div className="features-grid">
           {[
             {
-              icon: '✈️',
+              icon: <Image src="/icons/airplane.png" width={48} height={48} alt="מטוס" />,
               title: 'אווטאר דינמי ולוגיקת טיסה',
               desc: 'כל תלמיד הופך ל"טייס" עם דרכון ומיצוג חזותי מלא (מדים, דרגות ועיטורים) שמתעדכן אוטומטית בהתאם למדד ה"מיילים" (דלק) ומד ה"בטיחות". חוויה סוחפת שמייצרת משמעות.',
               delay: 1,
             },
             {
-              icon: '🛰️',
+              icon: <Image src="/icons/radar.png" width={48} height={48} alt="מגדל פיקוח" />,
               title: 'מגדל פיקוח (למחנך)',
               desc: 'אפליקציה חכמה למחנך המאפשרת "הענקת חותמות" (מיילים על הצטיינות) או "דיווח חריגה" (הורדת בטיחות) בזמן אמת. ניהול טקסי עליית דרגה (Check-In) וראדאר כיתתי חי.',
               delay: 2,
             },
             {
-              icon: '👨‍👩‍👧‍👦',
+              icon: <HomeIcon size={40} color="var(--gold, #dfb461)" />,
               title: 'צוות הקרקע (להורים)',
               desc: 'הוריהם של הטייסים שותפים מלאים בחוויה. הם יכולים להוסיף מיילים מתוך הבית ("חינוך ביתי") ולעדכן אירועי משמעת ו"בטיחות טיסה" הישר מהנייד.',
               delay: 3,
             },
             {
-              icon: '💳',
+              icon: <CreditCard size={40} color="var(--gold, #dfb461)" />,
               title: 'Login חכם וכניסת NFC',
               desc: 'תמיכה בטכנולוגיית כרטיסים חכמים לתלמידים, ממשק מתקדם ויזואלי בסגנון "טבלט תחנת עגינה" לכל כיתה, כולל גילוי כפילויות של כרטיסי טיסה במרווח אפס.',
               delay: 4,
             },
             {
-              icon: '📊',
+              icon: <BarChart3 size={40} color="var(--gold, #dfb461)" />,
               title: 'דשבורד מנהל (מנהל הנמל)',
               desc: 'מערכת בקרה עליונה למנהלים: יצוא דוחות, מעקב אחרי אובדן גובה אצל טייסים הזקוקים לעזרה, התאמות תקנונים, וניהול הפרויקט כולו בקלות ובשקיפות.',
               delay: 5,
             },
             {
-              icon: '🎁',
+              icon: <Gift size={40} color="var(--gold, #dfb461)" />,
               title: 'Duty Free – חנות יעדים',
               desc: 'חלון המרה מתקדם בו התלמיד יוכל להמיר את "המיילים" שלו בפרסים, זכויות או יעדים נכספים, כולל מנגנון "חוק האיזון" שאינו מאפשר רכישות אם מד הבטיחות נמוך מדי.',
               delay: 6,
@@ -226,8 +229,11 @@ export default function Home() {
       <section id="methodology" className="section">
         <div className="methodology-section">
           <div className="section-header reveal">
-            <div className="section-divider" />
-            <h2>האתגר והפתרון: חינוך 360°</h2>
+            <div className="wing-title-wrapper">
+              <span className="wing left"></span>
+              <h2>האתגר והפתרון: חינוך 360°</h2>
+              <span className="wing right"></span>
+            </div>
             <p>
               פלטפורמה המגשרת על הפער בין בית הספר לבית, דרך מנגנון
               משחוק מתקדם ושותפות מלאה.
@@ -243,9 +249,9 @@ export default function Home() {
                 המתרחש במוסד לבין המתרחש בבית.
               </p>
               <ul className="challenge-list">
-                <li><span className="check">✓</span> שותפות בית-ספר-בית</li>
-                <li><span className="check">✓</span> חוויה של צמיחה אישית</li>
-                <li><span className="check">✓</span> מערכת משחוק ומוטיבציה (Gamification)</li>
+                <li><span className="check"><Check size={18} /></span> שותפות בית-ספר-בית</li>
+                <li><span className="check"><Check size={18} /></span> חוויה של צמיחה אישית</li>
+                <li><span className="check"><Check size={18} /></span> מערכת משחוק ומוטיבציה (Gamification)</li>
               </ul>
             </div>
             <div className="methodology-image reveal reveal-delay-2">
@@ -277,8 +283,11 @@ export default function Home() {
 
           {/* Flow diagram */}
           <div className="section-header reveal" style={{ marginTop: '4rem' }}>
-            <div className="section-divider" />
-            <h2>תרשים הזרימה של הטייס</h2>
+            <div className="wing-title-wrapper">
+              <span className="wing left"></span>
+              <h2>תרשים הזרימה של הטייס</h2>
+              <span className="wing right"></span>
+            </div>
             <p>
               היררכיה פיקודית המעניקה זרימת מידע חלקה והערכה דינמית.
               חוק האיזון האווירודינמי מבטיח שכל המערכות מסונכרנות.
@@ -297,11 +306,11 @@ export default function Home() {
 
           <div className="roles-grid" style={{ marginTop: '3rem' }}>
             {[
-              { icon: '👑', title: 'המצביא העליון', desc: 'החזון והפקודות. מטרת העל מכוונת לאורה ומובילה את היעד הראשי.' },
-              { icon: '🏢', title: 'מנהל הנמל', desc: 'ארגון המשאבים ולוגיסטיקה כוללת. דואג להגבהת הסטנדרטים במוסד.' },
-              { icon: '🗼', title: 'מגדל הפיקוח', desc: 'צוות ההוראה – מאשרים המראות ומנהלים את המרחב האווירי.' },
-              { icon: '🛠️', title: 'צוות קרקע', desc: 'ההורים – אחראים לחיזוק התחזוקה מהבית ויצירת בסיס אם יציב.' },
-              { icon: '👨‍✈️', title: 'הטייסים', desc: 'תלמידי המוסד – אלה המנווטים ומבצעים בפועל. צוברים דרגות ועולים מעלה.' },
+              { icon: <Crown size={32} color="var(--gold, #dfb461)" />, title: 'המצביא העליון', desc: 'החזון והפקודות. מטרת העל מכוונת לאורה ומובילה את היעד הראשי.' },
+              { icon: <Building2 size={32} color="var(--gold, #dfb461)" />, title: 'מנהל הנמל', desc: 'ארגון המשאבים ולוגיסטיקה כוללת. דואג להגבהת הסטנדרטים במוסד.' },
+              { icon: <TowerControl size={32} color="var(--gold, #dfb461)" />, title: 'מגדל הפיקוח', desc: 'צוות ההוראה – מאשרים המראות ומנהלים את המרחב האווירי.' },
+              { icon: <Wrench size={32} color="var(--gold, #dfb461)" />, title: 'צוות קרקע', desc: 'ההורים – אחראים לחיזוק התחזוקה מהבית ויצירת בסיס אם יציב.' },
+              { icon: <Plane size={32} color="var(--gold, #dfb461)" />, title: 'הטייסים', desc: 'תלמידי המוסד – אלה המנווטים ומבצעים בפועל. צוברים דרגות ועולים מעלה.' },
             ].map((role, i) => (
               <div key={role.title} className={`role-item reveal reveal-delay-${i + 1}`}>
                 <span className="role-icon">{role.icon}</span>
@@ -318,8 +327,11 @@ export default function Home() {
       {/* ============================================ */}
       <section className="section gallery-section">
         <div className="section-header reveal">
-          <div className="section-divider" />
-          <h2>הצצה לפרוטוקול הטיסה</h2>
+          <div className="wing-title-wrapper">
+            <span className="wing left"></span>
+            <h2>הצצה לפרוטוקול הטיסה</h2>
+            <span className="wing right"></span>
+          </div>
           <p>גלו את עומק המערכת דרך פרוטוקול הטיסה המלא שלנו</p>
         </div>
         <div className="gallery-scroll">
@@ -341,8 +353,11 @@ export default function Home() {
       <section className="section">
         <div className="testimonials-section">
           <div className="section-header reveal">
-            <div className="section-divider" />
-            <h2>מה אומרים עלינו</h2>
+            <div className="wing-title-wrapper">
+              <span className="wing left"></span>
+              <h2>מה אומרים עלינו</h2>
+              <span className="wing right"></span>
+            </div>
             <p>מנהלים ומחנכים שכבר הפעילו את הטרמינל במוסדות שלהם</p>
           </div>
           <div className="testimonials-grid">
@@ -353,7 +368,7 @@ export default function Home() {
                 של התלמידים. הם מגיעים לבוקר עם אנרגיה שלא ראינו לפני כן.
               </p>
               <div className="testimonial-author">
-                <div className="testimonial-avatar">👨‍🏫</div>
+                <div className="testimonial-avatar"><UserRound size={28} /></div>
                 <div>
                   <div className="testimonial-name">הרב מ. כהן</div>
                   <div className="testimonial-role">מנהל ת&quot;ת, ירושלים</div>
@@ -368,7 +383,7 @@ export default function Home() {
                 מהתהליך והילדים מקבלים חיזוק מכל הכיוונים.
               </p>
               <div className="testimonial-author">
-                <div className="testimonial-avatar">👩‍💼</div>
+                <div className="testimonial-avatar"><UserRound size={28} /></div>
                 <div>
                   <div className="testimonial-name">הרב ש. לוי</div>
                   <div className="testimonial-role">מחנך ראשי, בני ברק</div>
@@ -383,7 +398,7 @@ export default function Home() {
                 אפליקציית &quot;צוות הקרקע&quot; היא פשוט גאונית.
               </p>
               <div className="testimonial-author">
-                <div className="testimonial-avatar">👨</div>
+                <div className="testimonial-avatar"><UserRound size={28} /></div>
                 <div>
                   <div className="testimonial-name">יוסי ד.</div>
                   <div className="testimonial-role">הורה, כפר חב&quot;ד</div>
@@ -399,8 +414,11 @@ export default function Home() {
       {/* ============================================ */}
       <section id="pricing" className="section">
         <div className="section-header reveal">
-          <div className="section-divider" />
-          <h2>הפעלת הטרמינל אצלכם: מסלולי שירות</h2>
+          <div className="wing-title-wrapper">
+            <span className="wing left"></span>
+            <h2>הפעלת הטרמינל אצלכם: מסלולי שירות</h2>
+            <span className="wing right"></span>
+          </div>
           <p>בחרו את המסלול המתאים לגודל המוסד והחזון שלכם</p>
         </div>
         <div className="pricing-grid">
@@ -475,17 +493,17 @@ export default function Home() {
       <section id="contact" className="cta-section">
         <div className="cta-content reveal-scale">
           <div className="section-divider" />
-          <h2 className="text-gradient">מוכנים להמראה? 🚀</h2>
+          <h2 className="text-gradient">מוכנים להמראה? <Plane style={{marginLeft: '0.5rem', display: 'inline-block', verticalAlign: 'middle', transform: 'rotate(-45deg)'}} size={40} /></h2>
           <p>
             הצטרפו למהפכת החינוך החסידי. השאירו פרטים ונחזור אליכם
             עם טיסת אבטיפוס מותאמת אישית למוסד שלכם.
           </p>
           <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap' }}>
-            <a href="https://wa.me/972500000000" target="_blank" className="btn-primary btn-large" rel="noreferrer">
-              📱 שלחו הודעה בוואטסאפ
+            <a href="https://wa.me/972500000000" target="_blank" className="btn-primary btn-large" rel="noreferrer" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+              <MessageCircle size={20} /> שלחו הודעה בוואטסאפ
             </a>
-            <a href="mailto:info@knafayim.co.il" className="btn-outline btn-large">
-              ✉️ שלחו אימייל
+            <a href="mailto:info@knafayim.co.il" className="btn-outline btn-large" style={{display: 'flex', alignItems: 'center', gap: '0.5rem'}}>
+              <Mail size={20} /> שלחו אימייל
             </a>
           </div>
         </div>
