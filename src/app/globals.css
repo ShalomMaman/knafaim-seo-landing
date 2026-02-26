@@ -391,6 +391,7 @@ h1, h2, h3, h4 {
   -webkit-text-fill-color: var(--gray);
   background: none;
   -webkit-background-clip: unset;
+  background-clip: unset;
 }
 
 .hero p {
