@@ -2,7 +2,7 @@
 
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import { Plane, CreditCard, BarChart3, Gift, Crown, Building2, TowerControl, Wrench, MessageCircle, Mail, UserRound, Home as HomeIcon, Check } from 'lucide-react';
+import { Plane, CreditCard, BarChart3, Gift, Crown, Building2, TowerControl, Wrench, MessageCircle, Mail, Home as HomeIcon, Check } from 'lucide-react';
 export default function Home() {
   useEffect(() => {
     // Scroll reveal observer
@@ -347,67 +347,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ============================================ */}
-      {/* TESTIMONIALS / SOCIAL PROOF */}
-      {/* ============================================ */}
-      <section className="section">
-        <div className="testimonials-section">
-          <div className="section-header reveal">
-            <div className="wing-title-wrapper">
-              <span className="wing left"></span>
-              <h2>מה אומרים עלינו</h2>
-              <span className="wing right"></span>
-            </div>
-            <p>מנהלים ומחנכים שכבר הפעילו את הטרמינל במוסדות שלהם</p>
-          </div>
-          <div className="testimonials-grid">
-            <div className="testimonial-card reveal reveal-delay-1">
-              <div className="testimonial-quote">&ldquo;</div>
-              <p className="testimonial-text">
-                מאז שהכנסנו את טרמינל כנפיים, ראינו שינוי דרמטי במוטיבציה
-                של התלמידים. הם מגיעים לבוקר עם אנרגיה שלא ראינו לפני כן.
-              </p>
-              <div className="testimonial-author">
-                <div className="testimonial-avatar"><UserRound size={28} /></div>
-                <div>
-                  <div className="testimonial-name">הרב מ. כהן</div>
-                  <div className="testimonial-role">מנהל ת&quot;ת, ירושלים</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="testimonial-card reveal reveal-delay-2">
-              <div className="testimonial-quote">&ldquo;</div>
-              <p className="testimonial-text">
-                החיבור בין הבית למוסד הוא פשוט מדהים. ההורים מרגישים חלק
-                מהתהליך והילדים מקבלים חיזוק מכל הכיוונים.
-              </p>
-              <div className="testimonial-author">
-                <div className="testimonial-avatar"><UserRound size={28} /></div>
-                <div>
-                  <div className="testimonial-name">הרב ש. לוי</div>
-                  <div className="testimonial-role">מחנך ראשי, בני ברק</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="testimonial-card reveal reveal-delay-3">
-              <div className="testimonial-quote">&ldquo;</div>
-              <p className="testimonial-text">
-                כהורה, אני סוף סוף מרגיש שאני חלק מהחינוך של הילד גם במוסד.
-                אפליקציית &quot;צוות הקרקע&quot; היא פשוט גאונית.
-              </p>
-              <div className="testimonial-author">
-                <div className="testimonial-avatar"><UserRound size={28} /></div>
-                <div>
-                  <div className="testimonial-name">יוסי ד.</div>
-                  <div className="testimonial-role">הורה, כפר חב&quot;ד</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
       {/* ============================================ */}
       {/* PRICING SECTION */}
